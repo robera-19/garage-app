@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://www.evangadi.com/ -->
+<html lang="en" style="" class="">
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <!--Metas-->
+   <title>API Endpoints | Evangadi Networks</title>
+   <!--External Stylesheets css-->
+   <!-- Bootstrap -->
+   <link rel="stylesheet" href="./assets/bootstrap.min.css">
+   <!--Template Stylesheets css-->
+   <link rel="stylesheet" href="./assets/style.css">
+   <link rel="stylesheet" href="./assets/responsive.css">
+
+   <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
+</head>
+
+<body data-spy="scroll" data-target=".navbar-default" data-offset="100">
+   <div class="warpper clearfix api-body">
+      <div class="loggedin-wrapper">
+         <!-- Header -->
+         <header class="navbar-header">
+            <nav class="navbar navbar-expand-lg fixed-top">
+               <div class="container">
+                  <a class="navbar-brand" href="https://www.evangadi.com/"> <img src="./assets/evangadi-logo-home.png"
+                        alt=""></a>
+
+                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon  icon_menu"></span>
+                  </button>
+
+
+                  <div class="collapse navbar-collapse bg-orange" id="navbarCollapse">
+                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                           <a data-scroll="" class="nav-link section-scroll" href="https://www.evangadi.com/">Home</a>
+                        </li>
+
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </header>
+         <!--Header-->
+
+         <!--Begin Hero Section-->
+         <section class="onboarding-section bg-color">
+            <div class="container">
+               <div class="onboarding-wrapper">
+                  <div class="col-md-12 col-12 col-sm-12">
+                     <!-- On boarding area -->
+                     <div class="class-container">
+                        <!-- panel-login start -->
+
+                        <div class="authfy-panel panel-login left-align">
+                           <div>
+                              <div class="authfy-heading left-align">
+                                 <h1 class="auth-title bright">Abe Garage App: API Endpoints
+                                 </h1>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Employee log in</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+POST /api/employee/login HTTP/1.1
+Content-Type: application/json 
+Host: localhost:8080 
+{
+   "employee_email": "test@test.com",
+   "employee_password": "8HYsy&^uud*7hh"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Get Employees</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+GET /api/employees HTTP/1.1
+Host: localhost:8080 
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json                                                                                                      
+{
+   "limit":10,
+   "contacts":
+   [
+      {
+         "employee_id": 1,
+         "employee_email": "test@test.com",
+         "employee_first_name": "Test",
+         "employee_last_name": "Test",
+         "employee_phone": "555-555-5555",
+         "active_employee": 1,
+         "added_date": "2016-11-28T14:10:11.338Z"
+      },
+      {},
+      ...
+   ]
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Get Single Employee</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+GET /api/employee/:id HTTP/1.1
+Host: localhost:8080 
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "status": "success",
+   "data": {
+       "employee_id": 1,
+       "employee_email": "email@gmail.com",
+       "active_employee": 1,
+       "added_date": "2023-05-16T14:44:10.000Z",
+       "employee_info_id": 1,
+       "employee_first_name": "FName",
+       "employee_last_name": "LName",
+       "employee_phone": "555-555-5555",
+       "employee_role_id": 1,
+       "company_role_id": 3
+   }
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Add New Employee</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+POST /api/employee HTTP/1.1
+Content-Type: application/json 
+Host: localhost:8080 
+{
+   "employee_email": "test@test.com",
+   "employee_first_name": "Test",
+   "employee_last_name": "Test",
+   "employee_phone": "555-555-5555",
+   "active_employee": 1,
+   "added_date": "2016-11-28T14:10:11.338Z", 
+   "employee_password": "8HYsy&^uud*7hh"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Update Employee</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+PUT /api/employee HTTP/1.1
+Content-Type: application/json 
+Host: localhost:8080 
+{
+   "employee_id": 1,
+   "employee_first_name": "Test Updated",
+   "employee_last_name": "Test Updated",
+   "employee_phone": "555-555-6666",
+   "active_employee": 0,
+   "company_role_id": 3
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Delete Employee</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+DELETE /api/employee/:id HTTP/1.1
+Content-Type: application/json 
+
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Get All Services</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+GET /api/services HTTP/1.1
+Host: localhost:8080
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   {
+      "service_id": 1,
+      "service_name": "Oil change",
+      "service_description": "Some description about the oil change"
+   },
+   {},
+   ...
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Get Single Service</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+GET /api/service/:id HTTP/1.1
+Host: localhost:8080
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "service_id": 1,
+   "service_name": "Oil change",
+   "service_description": "Some description about the oil change"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Add New Service</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+POST /api/service HTTP/1.1
+Content-Type: application/json 
+Host: localhost:8080 
+{
+   "service_name": "Oil change",
+   "service_description": "Some description about the oil change"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Update Service</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+PUT /api/service HTTP/1.1
+Content-Type: application/json 
+Host: localhost:8080 
+{
+   "service_id": 1,
+   "service_name": "Oil change updated",
+   "service_description": "Some description about the oil change updated"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Get Customers</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+GET /api/customers HTTP/1.1
+Host: localhost:8080
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "limit":10,
+   "customers":
+   [
+      {
+      "customer_id": 1,
+      "customer_email": "test@test.com",
+      "customer_phone_number": "555-555-5555",
+      "customer_first_name": "Test",
+      "customer_last_name": "Test",
+      "customer_hash": "khsdgfkujhkjnfdfg7763hdff",
+      "active_customer_status": 1,
+      "customer_added_date": "2016-11-28T14:10:11.338Z"
+      },
+      {},
+      ...
+   ]
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Get Single Customer</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+GET /api/customer/:id HTTP/1.1
+Host: localhost:8080
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "customer_id": 1,
+   "customer_email": "test@test.com",
+   "customer_phone_number": "555-555-5555",
+   "customer_first_name": "Test",
+   "customer_last_name": "Test",
+   "customer_hash": "khsdgfkujhkjnfdfg7763hdff",
+   "active_customer_status": 1,
+   "customer_added_date": "2016-11-28T14:10:11.338Z"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Add New Customer</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+POST /api/customer HTTP/1.1
+Content-Type: application/json 
+Host: localhost:8080 
+{
+   "customer_email": "test@test.com",
+   "customer_phone_number": "555-555-5555",
+   "customer_first_name": "Test",
+   "customer_last_name": "Test",
+   "active_customer_status": 1
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Update Customer</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+PUT /api/employee HTTP/1.1
+Content-Type: application/json 
+Host: localhost:8080 
+{
+   "customer_id": 1,
+   "customer_phone_number": "555-555-8888",
+   "customer_first_name": "Test Updated",
+   "customer_last_name": "Test Updated",
+   "active_customer_status": 0
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+
+
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Get Single Vehicle</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+GET /api/vehicle/:id HTTP/1.1
+Host: localhost:8080
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "status": "success",
+   "data": {
+       "customer_id": 2,
+       "customer_email": "test2@test.com",
+       "customer_phone_number": "555-555-5555",
+       "customer_added_date": "2023-05-19T19:46:05.000Z",
+       "customer_hash": "7599502b735425943fffc167b4c9cfb072d028c109ee07501c8711a4fe0e12e7",
+       "customer_info_id": 2,
+       "customer_first_name": "Test 2",
+       "customer_last_name": "Test 2",
+       "active_customer_status": 1
+   }
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Add New Vehicle</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+POST /api/vehicle HTTP/1.1
+Content-Type: application/json 
+Host: localhost:8080 
+{
+   "customer_id": 1,
+   "vehicle_year": 2022,
+   "vehicle_make": "Tesla",
+   "vehicle_model": "Model S",
+   "vehicle_type": "Sedan",
+   "vehicle_mileage": "10000",
+   "vehicle_tag": "9890Ab2",
+   "vehicle_serial": "458008887783543435553434",
+   "vehicle_color": "Silver"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Update Vehicle</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+PUT /api/vehicle HTTP/1.1
+Content-Type: application/json 
+Host: localhost:8080 
+{
+   "vehicle_id": 1,
+   "vehicle_year": 2023,
+   "vehicle_make": "Tesla Updated",
+   "vehicle_model": "Model S Updated",
+   "vehicle_type": "Sedan Updated",
+   "vehicle_mileage": "10001",
+   "vehicle_tag": "9890Ab2 Updated",
+   "vehicle_serial": "458008887783543435553434 Updated",
+   "vehicle_color": "Silver Updated"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Get Vehicles Per Customer</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+GET /api/vehicles/:customer_id HTTP/1.1
+Host: localhost:8080
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "customer_id": 1,
+   {
+      "vehicle_id": 1,
+      "customer_id": 1,
+      "vehicle_year": "2022",
+      "vehicle_make": "Tesla",
+      "vehicle_model": "Model S",
+      "vehicle_type": "Sedan",
+      "vehicle_mileage": "10000",
+      "vehicle_tag": "9890Ab2",
+      "vehicle_serial": "458008887783543435553434",
+      "vehicle_color": "Silver"
+   },
+   {},
+   ...
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Get All Orders</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+GET /api/orders HTTP/1.1
+Host: localhost:8080
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+[
+    {
+        "order_id": 1,
+        "employee_id": 1,
+        "customer_id": 1,
+        "vehicle_id": 1,
+        "order_description": "Some description about the order",
+        "order_date": "2023-04-28T17:29:54.000Z",
+        "estimated_completion_date": "2023-04-28T22:27:02.000Z",
+        "completion_date": null,
+        "order_completed": 0,
+        "order_services": [
+            {
+                "service_id": 1
+            },
+            {
+                "service_id": 2
+            }
+        ]
+    },
+    {},
+    ...
+]
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Get Single Order</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+GET /api/order/:id HTTP/1.1
+Host: localhost:8080
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+[
+    {
+        "order_id": 1,
+        "employee_id": 1,
+        "customer_id": 1,
+        "vehicle_id": 1,
+        "order_description": "Some description about the order",
+        "order_date": "2023-04-28T17:29:54.000Z",
+        "estimated_completion_date": "2023-04-28T22:27:02.000Z",
+        "completion_date": null,
+        "order_completed": 0,
+        "order_services": [
+            {
+                "service_id": 1
+            },
+            {
+                "service_id": 2
+            }
+        ]
+    }
+]
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Add New Order</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+POST /api/order HTTP/1.1
+Content-Type: application/json 
+Host: localhost:8080 
+{
+   "employee_id": 1,
+   "customer_id": 1,
+   "vehicle_id": 1,
+   "order_description": "Some description about the order",
+   "estimated_completion_date": "2023-04-28 18:27:02.380",
+   "completion_date": null,
+   "order_completed": 0,
+   "order_services": [
+      {
+         "service_id": 5
+      },
+      {
+         "service_id": 6
+      },
+      {
+         "service_id": 3
+      }
+   ]
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+                              <div class="api-pack">
+                                 <div class="api-pack-body">
+                                    <div class="api-pack-body-item">
+                                       <div class="api-pack-body-item-title">
+                                          <h3>Update Order</h3>
+                                       </div>
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Request
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+PUT /api/order HTTP/1.1
+Content-Type: application/json 
+Host: localhost:8080 
+{
+   "order_id": 1,
+   "order_description": "Some description about the order",
+   "estimated_completion_date": "2023-04-28 18:27:02.380",
+   "completion_date": null,
+   "order_completed": 0,
+   "order_services": [
+      {
+         "service_id": 4
+      },
+      {
+         "service_id": 5
+      },
+      {
+         "service_id": 6
+      }
+   ]
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                       <div class="api-pack-body-item-content">
+                                          <div class="request-type">
+                                             Response
+                                          </div>
+                                          <div class="request-content">
+                                             <div>
+                                                <pre>
+   <code>
+Content-Type: application/json
+{
+   "success":"true"
+}
+   </code>
+</pre>
+                                             </div>
+                                          </div>
+                                       </div>
+
+                                    </div>
+                                 </div>
+
+                              </div>
+
+
+
+
+
+
+                           </div>
+                        </div>
+
+                     </div>
+                     <!-- ./authfy-login -->
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!--End Hero Section-->
+
+         <!--End Hero Section-->
+         <!--Footer-->
+         <footer class="footer">
+            <div class="footer-warpper">
+               <!--Request quote-->
+               <div class="footer-top">
+                  <div class="container">
+                     <div class="footer-bottom-content clearfix">
+                        <div class="row">
+                           <div class="col-lg-4 col-md-4">
+                              <div class="logo-footer">
+                                 <a class="navbar-brand" href="https://www.evangadi.com/"> <img
+                                       src="./assets/evangadi-logo-footer.png" alt=""></a>
+                              </div>
+
+                              <!-- Newsletter -->
+
+                              <ul class="footer-social-list list-social list-inline">
+                                 <li>
+                                    <a href="https://www.facebook.com/evangaditech" target="_blank">
+                                       <i class="social_facebook "></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="https://www.instagram.com/evangaditech/" target="_blank">
+                                       <i class="social_instagram "></i>
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="https://www.youtube.com/c/weareethiopians" target="_blank">
+                                       <i class="social_youtube "></i>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="col-lg-4 col-md-4">
+                              <h5>Useful Link</h5>
+                              <ul class="list-menu">
+                                 <li>
+                                    <a href="https://www.evangadi.com/legal/terms/">Terms of Service</a>
+                                 </li>
+                                 <li>
+                                    <a href="https://www.evangadi.com/legal/privacy/">Privacy policy</a>
+                                 </li>
+                              </ul>
+                           </div>
+                           <div class="col-lg-4 col-md-4">
+                              <h5>Contact Info</h5>
+                              <ul class="list-menu contact-list">
+                                 <li>
+                                    support@evangadi.com
+                                 </li>
+                                 <li>+1-202-386-2702</li>
+                              </ul>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>
+         <!--Footer -->
+      </div>
+   </div>
+</body>
+
+</html>
